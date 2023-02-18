@@ -32,7 +32,7 @@
                         <img src="/images/triangle.png" alt="triangle" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title">Triangle</h2>
+                        <h2 id="card1-name" class="card-title">Triangle</h2>
                         <p>Area (A)=0.5 x b x h</p>
                         <div class=" grid grid-cols-2 gap-2">
                             <input id="card1-input1" class="inline w-[50%]" type="text" placeholder="b">cm
@@ -55,7 +55,7 @@
                             <input class="inline w-[50%]" type="text" placeholder="i">cm
                         </div>
                         <div class=" card-actions">
-                            <button class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
+                            <button id="second2-button" class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -118,10 +118,18 @@
             </div>
             <div class="  w-[30%]">
                <h1 class="text-center underline font-bold py-2">Area Calculation</h1> 
-               <table>
-                <tr>
-                    <th>              </th>
-                </tr>
+               <table class="mx-auto">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th> Value</th>
+                        <th> Button</th>
+                    </tr>
+                </thead>
+                <tbody id="table-container">
+
+                </tbody>
                </table>
             </div>
         </section>
