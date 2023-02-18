@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="bg-sky-200 mx-auto items-center mb-10 flex w-[80%] justify-between  ">
+            <div class="p-2">
+                <h1 class="font-bold">Interactive</h1>
+                <p>Geometry Genius</p>
+            </div>
+            <div>
+                <button class="px-6 py-2 rounded-xl bg-blue-400 mr-3">Blog</button>
+            </div>
+        </nav>
+    </header>
+    <main class="w-[80%] bg-sky-200 mx-auto">
+        <section class="flex flex-cols">
+            <div class="lg:grid lg:grid-cols-3 gap-4 w-[70%]">
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/triangle.png" alt="triangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area (A)=0.5 x b x h</p>
+                        <div class=" grid grid-cols-2 gap-2">
+                            <input class="inline w-[50%]" type="text" placeholder="b">cm
+                            <input class="inline w-[50%]" type="text" placeholder="h">cm
+                        </div>
+                        <div class=" card-actions">
+                            <button class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/rectangle.png" alt="triangle" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area (A)=w x i</p>
+                        <div class=" grid grid-cols-2 gap-2">
+                            <input class="inline w-[50%]" type="text" placeholder="w">cm
+                            <input class="inline w-[50%]" type="text" placeholder="i">cm
+                        </div>
+                        <div class=" card-actions">
+                            <button class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A)=b x h</p>
+                      
+                           <p class="text-center">b=10cm, h=12cm</p>
+                         
+                        
+                        <div class=" card-actions">
+                            <button class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area (A)=0.5 x d<sub>1</sub> d<sub>2</sub></p>
+                        <p>d<sub>1</sub>=16cm ,d<sub>2</sub>=8cm</p>
+                        <div class=" card-actions">
+                            <button class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/pentagon.png" alt="Pentagon" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Area (A)=0.5 x p x b</p>
+                        <p>p=6cm, b=10cm</p>
+                        <div class=" card-actions">
+                            <button class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-full bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="/images/ellipse.png" alt="Ellipse" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A)=&pi;ab</p>
+                        <p> a=10cm, b=4cm</p>                  
+                        <div class=" card-actions">
+                            <button class=" bg-blue-400 px-10 py-2 rounded-xl  text-white font-bold">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="  w-[30%]">
+               <h1 class="text-center underline font-bold py-2">Area Calculation</h1> 
+               <table>
+                <tr>
+                    <th>              </th>
+                </tr>
+               </table>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
