@@ -54,64 +54,93 @@ function displayData(card1Name, totalValue) {
     <td>${number}</td>
     <td>${card1Name}</td>
     <td>${totalValue+'cm <sup>2</sup>'}</td>
-    <td> <button > Convert to m<sup>2</sup></button> </td>
+    <td> <button id="btn"> Convert to m<sup>2</sup></button> </td>
     `
     tableContainer.appendChild(tr)
 }
+ 
 // function 2
 function valueById(valueId) {
-    const value1String = document.getElementById(valueId).innerText
-    const value1 = parseInt(value1String)
+    const value1String = document.getElementById(valueId).value
+    const value1 = parseFloat(value1String)
     return value1
 }
 
 // function3
-function valueById(nameId) {
+function nameById(nameId) {
     const name = document.getElementById(nameId).innerText
     return name
 }
 // const ee=valueById('card3Value1')
 // console.log(ee)
-
+function isValid(){
+    if (isNaN(value1) || isNaN(value2) || value1 == '' || value2 == '') {
+        alert('please input a valid number')
+        return
+        displayData()
+    }
+}
 
 // card3
 document.getElementById('card3-button').addEventListener('click', function () {
-    number += 1
-    const idName = valueById('card3-title')
-    const value1 = valueById('card3Value1')
-    const value2 = valueById('card3Value2')
+    number+=1
+    const idName = nameById('card3-title')
+    const value1 = valueById('card3-input1')
+    const value2 = valueById('card3-input2')
+
+    if (isNaN(value1) || isNaN(value2) || value1 == '' || value2 == '') {
+        alert('please input a valid number')
+        return
+        displayData()
+    }
     const totalValue = value1 * value2
-    displayData(idName, totalValue)
+    displayData(idName, totalValue.toFixed(2))
 })
 
 
 // card 4
 document.getElementById('card4-button').addEventListener('click', function () {
-    number += 1
-    const idName = valueById('card4-title')
-    const value1 = valueById('card4-value1')
-    const value2 = valueById('card4-value2')
+    number+=1
+    const idName = nameById('card4-title')
+    const value1 = valueById('card4-input1')
+    const value2 = valueById('card4-input2')
+    
+    if (isNaN(value1) || isNaN(value2) || value1 == '' || value2 == '') {
+        alert('please input a valid number')
+        return
+        displayData()
+    }
     const totalValue = 0.5 * value1 * value2
-    displayData(idName, totalValue)
+    displayData(idName, totalValue.toFixed(2))
 })
 
 
 // card 5
 document.getElementById('card5-button').addEventListener('click', function () {
     number += 1
-    const idName = valueById('card5-name')
-    const value1 = valueById('card5-value1')
-    const value2 = valueById('card5-value2')
+    const idName = nameById('card5-name')
+    const value1 = valueById('card5-input1')
+    const value2 = valueById('card5-input2')
+    if (isNaN(value1) || isNaN(value2) || value1 == '' || value2 == '') {
+        alert('please input a valid number')
+        return
+        displayData()
+    }
     const totalValue = 0.5 * value1 * value2
-    displayData(idName, totalValue)
+    displayData(idName, totalValue.toFixed(2))
 })
 
 // card 6
 document.getElementById('card6-button').addEventListener('click', function () {
     number += 1
-    const idName = valueById('card6-name')
-    const value1 = valueById('card6-value1')
-    const value2 = valueById('card6-value2')
+    const idName = nameById('card6-name')
+    const value1 = valueById('card6-input1')
+    const value2 = valueById('card6-input2')
+    if (isNaN(value1) || isNaN(value2) || value1 == '' || value2 == '') {
+        alert('please input a valid number')
+        return
+        displayData()
+    }
     const totalValue = 3.14 * value1 * value2
     displayData(idName, totalValue.toFixed(2))
     random_bg_color()
