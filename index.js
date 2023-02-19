@@ -19,7 +19,7 @@ document.getElementById('card1-btn').addEventListener('click', function () {
         displayData()
     }
     const totalValue = 0.5 * firstCardInput1 * firstCardInput2
-    displayData(card1Name, totalValue)
+    displayData(card1Name, totalValue.toFixed(2))
 })
 
 
@@ -44,7 +44,7 @@ document.getElementById('card2-button').addEventListener('click', function () {
         displayData()
     }
     const totalValue = firstCardInput1 * firstCardInput2
-    displayData(card1Name, totalValue)
+    displayData(card1Name, totalValue.toFixed(2))
 })
 // function 1
 function displayData(card1Name, totalValue) {
@@ -53,7 +53,7 @@ function displayData(card1Name, totalValue) {
     tr.innerHTML = `
     <td>${number}</td>
     <td>${card1Name}</td>
-    <td>${totalValue}</td>
+    <td>${totalValue+'cm <sup>2</sup>'}</td>
     <td> <button > Convert to m<sup>2</sup></button> </td>
     `
     tableContainer.appendChild(tr)
@@ -121,6 +121,9 @@ document.getElementById('card6-button').addEventListener('click', function () {
 randomColor = function (e) {
     e.style.background = "#" + (Math.random() * 0xFFFFFF << 0).toString(16);
 }
-document.get
+// go to another page
+document.getElementById('blog-btn').addEventListener('click',function(){
+    window.location.href='http://127.0.0.1:5500/question.html'
+})
 
 
