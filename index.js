@@ -13,19 +13,17 @@ document.getElementById('card1-btn').addEventListener('click',function(){
     const firstCardInput2String=document.getElementById('card1-input2').value
     const firstCardInput2 =parseFloat(firstCardInput2String);
 
-    if (typeof firstCardInput1String =='string'|| typeof firstCardInput2String == 'string') {
+    if (isNaN (firstCardInput1String) || isNaN(firstCardInput2String )|| firstCardInput1String =='' || firstCardInput2String == '')  {
         alert('please input a valid number')
+        return
+     displayData()
     }
-    // if ( typeof firstCardInput2 !== 'number'||firstCardInput2 !== ''&&firstCardInput1 !== ''||typeof firstCardInput1 !== 'number' ) {
-    //     alert('input a valid number')
-    //     return
-    //     displayData()
-    // }
-    // console.log(typeof firstCardInput2)
-
     const totalValue = 0.5*firstCardInput1*firstCardInput2
     displayData(card1Name,totalValue)
 })
+
+
+// card 2
 document.getElementById('card2-button').addEventListener('click',function(){
 
 number+=1
@@ -40,13 +38,10 @@ const firstCardInput1 =parseFloat(firstCardInput1String);
 const firstCardInput2String=document.getElementById('card2-input2').value
 const firstCardInput2 =parseFloat(firstCardInput2String);
 
-if (firstCardInput1 != 'number') {
-    alert('input a valid number')
-    return alert
-    displayData()
-}
-else{
-    displayData(card1Name,totalValue)
+if (isNaN (firstCardInput1String) || isNaN(firstCardInput2String )|| firstCardInput1String =='' || firstCardInput2String == '')  {
+    alert('please input a valid number')
+    return
+     displayData()
 }
 const totalValue = firstCardInput1*firstCardInput2
   displayData(card1Name,totalValue)
