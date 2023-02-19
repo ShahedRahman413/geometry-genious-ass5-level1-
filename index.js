@@ -13,6 +13,9 @@ document.getElementById('card1-btn').addEventListener('click',function(){
     const firstCardInput2String=document.getElementById('card1-input2').value
     const firstCardInput2 =parseFloat(firstCardInput2String);
 
+    if (typeof firstCardInput1String =='string'|| typeof firstCardInput2String == 'string') {
+        alert('please input a valid number')
+    }
     // if ( typeof firstCardInput2 !== 'number'||firstCardInput2 !== ''&&firstCardInput1 !== ''||typeof firstCardInput1 !== 'number' ) {
     //     alert('input a valid number')
     //     return
@@ -114,14 +117,44 @@ document.getElementById('card6-button').addEventListener('click',function(){
   const idName=  valueById('card6-name')
  const value1= valueById('card6-value1')
  const value2= valueById('card6-value2')
- const totalValue =0.5* value1*value2
-  displayData(idName,totalValue)
+ const totalValue =3.14* value1*value2
+  displayData(idName,totalValue.toFixed(2))
+  random_bg_color()
 })
 
+// document.getElementById('card6-button').addEventListener('mouseup',function(){
+//    const hello= document.getElementById('card6')
+//     function rg(m, n) {
+//         return Math.floor( Math.random() * (n - m + 1) ) + m;
+//     }
+    
+//     function hex(i) {
+//         return i.toString(16);
+//     }
+    
+//     function randColor() {
+//         return '#' + hex(rg(1, 15)) + hex(rg(1, 15)) + hex(rg(1, 15)) +
+//             hex(rg(1, 15)) + hex(rg(1, 15)) + hex(rg(1, 15));
+//     }
+    
+//     $(".subContent").mouseover(function() {
+//         $(this).css("background-color",randColor());
+//     });
+// })
 
 
 
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+ console.log(bgColor);
+  
+    document.body.style.background = bgColor;
+    }
 
+random_bg_color();
 
 
 
