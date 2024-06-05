@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "geometry-genius-resources",
+			"path": "geometry-genius-resources"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "assinment5"
+	}
+}

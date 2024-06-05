@@ -57,6 +57,9 @@ function displayData(card1Name, totalValue) {
     <td> <button id="btn"> Convert to m<sup>2</sup></button> </td>
     `
     tableContainer.appendChild(tr)
+  const button=  document.getElementById('btn')
+//   console.log(button)
+button.style.backgroundColor ='red'
 }
  
 // function 2
@@ -74,7 +77,7 @@ function nameById(nameId) {
 // const ee=valueById('card3Value1')
 // console.log(ee)
 function isValid(){
-    if (isNaN(value1) || isNaN(value2) || value1 == '' || value2 == '') {
+    if (isNaN(value1) || isNaN(value2) || value1 == '' || value2 == '' || value1 <0 || value2<0) {
         alert('please input a valid number')
         return
         displayData()
@@ -152,7 +155,7 @@ randomColor = function (e) {
 }
 // go to another page
 document.getElementById('blog-btn').addEventListener('click',function(){
-    window.location.href='http://127.0.0.1:5500/question.html'
+    window.location.href='question.html'
 })
 
 
